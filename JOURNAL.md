@@ -112,3 +112,20 @@ After that, I moved some resistors around on the board, finished routing, and en
 The white rectangle is temporary; it is to show where the shield cap goes.
 
 **Total time spent: 3.5 hours**
+
+# July 27th: Initial (Final?) Case
+
+The case was a very simple design, as there can't be too much on the back of a patient's neck. This is the design I came up with:
+<img width="1147" height="381" alt="image" src="https://github.com/user-attachments/assets/5c3fd138-bd14-439a-b1e0-5c29d0d27437" />
+The holes in the ends of the arms are for a Velcro strap. Initially, I had decided to just use a belt system, where the silicone would wrap around your neck and slide under itself, locking it in place. However, I realized that it had the chance of interfering with the larynx/Adam's apple location, so I decided that Velcro would be better, as it can be adjusted to fit better. 
+
+I began the design by creating an offset of the PCB, which I exported from KiCad. The wall is 2mm thick, with a 0.2mm tolerance offset.
+<img width="562" height="616" alt="image" src="https://github.com/user-attachments/assets/3642724f-d899-4619-9b33-d803898323a8" />
+
+After I built the wall, I added two tabs, one on the top and one on the bottom, to help keep the PCB in while allowing easy removal to charge the battery. I intentionally left the USB hole covered in the design, that way, you can't charge it while the device is still attached to you, in case anything goes wrong. 
+
+<img width="777" height="547" alt="image" src="https://github.com/user-attachments/assets/8d0f31d7-1487-4c82-a8a2-6974fcd413ca" />
+
+I found a 502035 400mAh battery on Amazon, which will work nicely for this design. It is thin yet holds ample power. After that, I rounded the edges and added the arms on the side, which finished my design. I added a hole for the wiring. This is my preliminary design, and I may adjust it after I actually get the PCB and Velcro.
+
+**Total time spent: 0.75 hours**
