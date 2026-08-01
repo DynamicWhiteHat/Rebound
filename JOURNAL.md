@@ -129,3 +129,35 @@ After I built the wall, I added two tabs, one on the top and one on the bottom, 
 I found a 502035 400mAh battery on Amazon, which will work nicely for this design. It is thin yet holds ample power. After that, I rounded the edges and added the arms on the side, which finished my design. I added a hole for the wiring. This is my preliminary design, and I may adjust it after I actually get the PCB and Velcro.
 
 **Total time spent: 0.75 hours**
+
+# July 28th: Conglomerate of Activities
+
+I began today by looking for some electrodes fit for my design. Due to their location under the chin and on the neck, the electrodes need to be very small, preferrably between 10-20mm in diameter. However, the issue with this size is that they are not *easily* commercially available. Although products like Coviden Kendall H124SG exist (shown below), they are single use and are only available from medical distributors, which incurs a high shipping fee if the order cost does not exceed $200. For this project and its budget, these electrodes are simply not good.
+
+<img width="120" height="120" alt="image" src="https://github.com/user-attachments/assets/20dfdaa0-233a-49d2-a6f1-73251fceaa92" />
+
+I continued my search on AliExpress, looking for small electrodes, pediatric electrodes, and similar items. I did not find anything good, with most of the electrodes being 30mm at the smallest. The smallest I was able to find were part of multi packs, sold as TENS electrodes. These electrodes are reusable and are primarily used for pain relief, but they work just fine for this project. Below is one of the packs:
+
+<img width="237" height="240" alt="image" src="https://github.com/user-attachments/assets/f7a65842-027b-4294-b9cf-03b187ee7e87" />
+
+However, I do not need all of the other sizes, and they only provide a few of the very small size. The best alternative I was able to find was these oddly shaped single-use electrodes:
+
+<img width="428" height="316" alt="image" src="https://github.com/user-attachments/assets/92ab872c-6d41-48df-9bc5-9595e9f3f1f4" />
+
+I continued my search on Amazon. I mainly found more of the TENS electrode packs. After searching for a while and using the Alexa shopping assistant, I was able to find these 30mm electrodes:
+
+<img width="398" height="451" alt="image" src="https://github.com/user-attachments/assets/b08efd31-d321-4656-bae4-5f6173e80118" />
+
+I quickly made some samples out of a napkin I had, and they seem to fit. I will use these for now.
+
+Afterwards, I moved on to the parts selection for my PCB. Many of the components on my PCB require specialized characteristics, such as a high Q factor or ceramic core. I mostly just googled for parts, with the search of "Good [component] for [circuit]," and I used the AI response. I trust the AI on this since they are pretty common parts that are used by many people. I opened the parts on LCSC, copied their LCSC number and added them to my BOM in KiCad. I used the JLCPCB tools plugin for KiCad to generate a BOM. I got tired of this and ended early, after adding most of the important parts. The rest of the components do not require any special considerations.
+
+After that, I moved on to the code. I set up PlatformIO to serve as my codebase. This is my first time using PlatformIO. I chose it to allow me to use multiple cores of the ESP32 while keeping everything in different files, which is best done in VSCode. I watched a few videos on the math that goes into SEMG analysis. The general process is as follows:
+
+- FFT to filter the background noise
+- Bandpass filter to remove the background noise
+- RMS envelope to find the average power of a frame of SEMG data
+
+Now I have to code it.
+
+**Total time spent: 4 hours**
