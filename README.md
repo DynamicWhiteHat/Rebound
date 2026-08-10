@@ -53,6 +53,10 @@ Once the PCB has been assembled, crimp and assemble the JST SH male connector wi
 The combination of the ADS1292 and AD5940 ICs allows the device to recognize when a swallow is "off beat". Trained on data provided by a UCLA study, the ADS1292 uses its sEMG abilities to monitor the activation of submental muscles that elevate the larynx to protect the airway during swallowing. Using a random forest algorithm, the device determines if the action performed was a swallow. By calculating the delta between the swallow and an object detected in the throat by the AD5940 and running it through a one-class SVM, whether or not a silent aspiration was performed can be determined.
 
 ## BOM
+
+> [!NOTE]
+> PEBA was selected for the 3D-printed case material as it is more flexible than JLC3DP's offering of TPU and biocompatible.
+
 |Part                       |Quantity            |Price                |Link                                                                                |||  |                                          |
 |---------------------------|--------------------|---------------------|------------------------------------------------------------------------------------|----------|---------|---------|--------------------------------------------------|
 |PCB+Stencil                |1 Order             |$57.10               |JLCPCB Quote                                                                        |          |         |         |                                                  |
