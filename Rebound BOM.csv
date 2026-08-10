@@ -1,6 +1,7 @@
 Part,Quantity,Price,Link,,,,
 PCB+Stencil,1 Order,$57.10,JLCPCB Quote,,,,
 PCB Parts,1 Order,$92.88,See Below,,,,
+3D Printed Case,1,$6.13,JLC3DP Quote,,,,
 Multi-Core Wire,"1x 3 Core, 1x 4 Core",$4.06,https://www.aliexpress.us/item/2255800378204277.html,,,,
 Electrodes,1 Pack of 10,$13.85,https://www.amazon.com/TENS-Electrodes-Premium-Replacement-Discount/dp/B01BLYJEPK/,,,,
 Shield Cap Holder,1 Pack of 5,$10.50,https://www.aliexpress.us/item/3256808839294920.html,,,,
@@ -9,7 +10,7 @@ JST SH Pins,1 Box,$4.36,https://www.aliexpress.us/item/3256808432090471.html,,,,
 Electrode Buttons,1 Pack of 10,$3.21,https://www.aliexpress.us/item/3256806634536037.html,,,,
 Velcro Straps,1,$1.91,https://www.aliexpress.us/item/3256808752475373.html,,,,
 LiPo Battery,1,$9.00,https://www.amazon.com/Battery-Rechargeable-Lithium-Polymer-Connector/dp/B09F9W7Z6J/,,,,
-,Total:,$216.15,,,,,
+,Total:,$222.28,,,,,
 LCSC,,,,,,,
 Description,Quantity Needed,Mrf#,Minimum Order Qty.,Unit Price,Ext Price,LCSC#,Link
 0.1uF,4,CL05B104KB54PNC,100,0.0094,0.94,C307331,https://www.lcsc.com/product-detail/C307331.html
