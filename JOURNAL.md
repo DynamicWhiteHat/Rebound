@@ -161,3 +161,17 @@ After that, I moved on to the code. I set up PlatformIO to serve as my codebase.
 Now I have to code it.
 
 **Total time spent: 4 hours**
+
+# August 9th: Finished initial code and part selection
+
+Today I finished the code and selected all my parts for the PCB. I haven't added the math processing yet, but that will require testing with the actual device, so I won't be able to do that until I have my PCB built and working. For now, I have just added printing statements. I compiled my code in PlatformIO and got this message:
+<img width="1452" height="35" alt="image" src="https://github.com/user-attachments/assets/a5f7c068-2e73-4dff-af0e-b11d31b51573" />
+This is my file structure:
+<img width="363" height="456" alt="image" src="https://github.com/user-attachments/assets/506da8ef-9a9e-40fe-bc46-41973ff6416b" />
+Most of the AD5940 files were pulled from an Analog Devices repo online. This was great since the IC has a lot of math going on inside, which makes making a driver for it very difficult. I had to make my own drivers for the ADS1292, however. The only publicly available ones are for a custom PCB made by protocentral that has the respiration function enabled. Making a driver wasn't too difficult. The ".h" file defines all the methods and variables to be used in the implementation ".c" file, much like an interface in Java. Here is my ".h" file:
+<img width="507" height="746" alt="image" src="https://github.com/user-attachments/assets/f55ae914-2871-4f7d-8e8c-3709f928bde1" />
+The ".c" file creates actual code for the methods. This wasn't too difficult and was done in C++. Finally, I brought everything together in main.cpp. The ADS1292 wasn't too difficult to use, since I made the drivers myself, so they were simple. However, implementing the AD5940 took a bit more work. I had to read the AD5940Main.c file to figure out what methods I needed to read the BIA values and print them. Once I got that, I compiled and got a success message. This took me about 2 days.
+
+Next, I finished selecting my parts for the PCB. As I said earlier, all I had left were insignificant parts, ie parts that didn't have any special considerations. This was pretty quick since I used the LCSC part selection tool from the JLCPCB fab plugin for KiCad. All I have left is to get my repo ready.
+
+**Total time spent: 5 hours**
