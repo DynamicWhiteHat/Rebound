@@ -1,6 +1,7 @@
 # Rebound
 Low-Cost Dysphagia Patch for Post-Stroke Patients
 
+
 ## Features:
 - ESP32S3 R8 SoC
 - ADS1292 for surface electromyography (sEMG)
