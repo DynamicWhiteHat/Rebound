@@ -180,3 +180,21 @@ The ".c" file creates actual code for the methods. This wasn't too difficult and
 Next, I finished selecting my parts for the PCB. As I said earlier, all I had left were insignificant parts, ie parts that didn't have any special considerations. This was pretty quick since I used the LCSC part selection tool from the JLCPCB fab plugin for KiCad. All I have left is to get my repo ready.
 
 **Total time spent: 5 hours**
+
+# August 10th: Finished repository
+
+Today I finished up the repository for the project. I began by creating my BOM.csv. To do so, I opened up my BOM from one of my past approved projects and copied its format. The good thing about the JLCPCB tools package I use in KiCad is that once I select the components, I can import that BOM into LCSC. I get this window:
+
+<img width="1832" height="777" alt="image" src="https://github.com/user-attachments/assets/bb5f0a92-b7f3-4e17-bcfb-1bb2453fc4ff" />
+
+LCSC will then automatically find the parts for me based on the part numbers I gave it using the KiCad package. Then, I add those parts to my cart and export the BOM, which has much more information (like pricing) than the KiCad one. I added these into my personal BOM. I was surprised by the cost of the parts, as they cost $82 before shipping. This is the most expensive LCSC order I will have placed. Afterwards, I added in the other parts required to make this project, such as the wires, electrodes, and battery. I decided to drop the silicon mold since the cheapest tub is $40. I will stick with TPU for now. This is my completed BOM:
+
+<img width="1268" height="708" alt="image" src="https://github.com/user-attachments/assets/ae0d1d5c-98b3-4f8b-aacf-77187d57ef3b" />
+
+Next, I added in the files to the repository. I like to do this in the built in VSCode web editor, available by pressing "." on the repository. This enables me to drag and drop files and arrange them into folders, without having to worry about making my own files on my laptop. I made some final changes to the case, such as increasing the clip space for the PCB, and made a render. This is what I got:
+
+<img width="1230" height="692" alt="image" src="https://github.com/user-attachments/assets/ada4bcb1-731a-4572-9b29-2fdc53fc052b" />
+
+Finally, I wrote my README. I had an interestingly fun time writing this and got carried away in the wiring. However, this should help others recreate my project better. I am now ready to submit.
+
+**Total time spent: 2 hours**
