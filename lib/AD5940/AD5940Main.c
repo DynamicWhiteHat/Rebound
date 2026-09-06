@@ -83,6 +83,7 @@ int32_t AD5940PlatformCfg(void)
   AD5940_HWReset();
   /* Platform configuration */
   AD5940_Initialize();
+  printf("ChipID: 0x%04X\n", (unsigned int)AD5940_GetChipID());
   /* Step1. Configure clock */
   clk_cfg.ADCClkDiv = ADCCLKDIV_1;
   clk_cfg.ADCCLkSrc = SYSCLKSRC_HFOSC;
@@ -90,7 +91,7 @@ int32_t AD5940PlatformCfg(void)
   clk_cfg.SysClkSrc = ADCCLKSRC_HFOSC;
   clk_cfg.HfOSC32MHzMode = bTRUE;
   clk_cfg.HFOSCEn = bTRUE;
-  clk_cfg.HFXTALEn = bTRUE;
+  clk_cfg.HFXTALEn = bFALSE;
   clk_cfg.LFOSCEn = bTRUE;
   AD5940_CLKCfg(&clk_cfg);
   /* Step2. Configure FIFO and Sequencer*/
