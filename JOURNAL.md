@@ -198,3 +198,18 @@ Next, I added in the files to the repository. I like to do this in the built in 
 Finally, I wrote my README. I had an interestingly fun time writing this and got carried away in the wiring. However, this should help others recreate my project better. I am now ready to submit.
 
 **Total time spent: 2 hours**
+
+# September 2nd: Assembled PCB
+
+I finally got all the parts today. My PCB order took quite a while to deliver because my last mile carrier was GoFo. Usually, I don't have any problems with them, but this time, my package sat around "out for delivery" for a few days before heading back to the local center. I finally got my PCB today. I decided to record a timelapse of the build, which I may post later. I began by flanking the PCB with the spare ones to lock it in place. Then I used the stencil to apply solder paste. It took me 2 tries before I got it *somewhat* well (subtle foreshadowing?)
+
+<img width="456" height="595" alt="image" src="https://github.com/user-attachments/assets/dec7c5c2-f164-41bc-be6e-4e7df2437dc1" />
+
+Afterwards, I placed all the components on. This was my first time doing 0402, and although it wasn't impossible, it was very difficult to place, and I would not like to use 0402 again. Once I placed all my components, I used a hot plate to cook the PCB. 
+
+<img width="2418" height="2849" alt="IMG_1861" src="https://github.com/user-attachments/assets/540432b7-e08c-49ee-9ad7-eff6a139933b" />
+
+Next, I plugged it in for the first time. However, nothing happened. My laptop didn't make a connection sound, and after testing different points on the PCB with my homemade "multimeter" (jumper wires attached to an LED), I figured I just had terrible solder joints and bridges. I now have to redo the whole assembly, and I have to figure out how to clean the ICs I only have one of.
+
+**Total time spent: 4 hours**
+
