@@ -22,14 +22,11 @@ Low-Cost Dysphagia Patch for Post-Stroke Patients
       <img src="Assets/ECGFront.png" width="400" />
     </td>
     <td align="center">
-      <img src="Assets/ECGBack.png" width="400" />
-    </td>
-    <td align="center">
       <img src="Assets/Case.png" width="400" />
     </td>
   </tr>
   <tr>
-    <td align="center" colspan="3">
+    <td align="center" colspan="2">
       <img width="433" height="289.5" alt="IMG_3539Crop" src="https://github.com/user-attachments/assets/cc2fa14a-7974-48d9-adac-e336db14d286" />
     </td>
   </tr>
