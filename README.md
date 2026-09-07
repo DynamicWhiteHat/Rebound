@@ -3,11 +3,17 @@ Low-Cost Dysphagia Patch for Post-Stroke Patients
 
 
 ## Features:
+### Core:
 - ESP32S3 R8 SoC
 - ADS1292 for surface electromyography (sEMG)
 - AD5940 for bioimpedance analysis
 - 16 MB flash with plenty of PSRAM
 - Onboard battery charging
+### Safety:
+- 100K current limiting resistors on ADS1292
+- 1K current limiting resistor and 15nF isolation capacitor on AD5940 current injection pin
+- 470nF isolation capacitors on AD5940 read pins
+- 2x TPD4E001 for ESD protection
 
 ## Image Gallery:
 <table align="center">
