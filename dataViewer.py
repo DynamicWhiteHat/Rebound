@@ -4,7 +4,7 @@ import numpy as np
 
 # 1. Load sEMG and Class labels
 semg_data, class_labels = np.loadtxt(
-    "Data/P4_S1/01_swallow_banana.csv",
+    "Data/P1_S3/01_swallow_banana.csv",
     delimiter=",",
     usecols=(0, 5),
     unpack=True,

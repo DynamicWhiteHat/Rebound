@@ -111,12 +111,8 @@ for file_path in file_list:
         peaks = find_peaks(envelope, prominence=np.max(envelope)*0.3)
         burst_count = len(peaks[0])
         max_amplitude = np.max(clean)
+        
 
-        if len(recent_peaks) > 0:
-            rel_prom = max_amplitude/np.mean(recent_peaks)
-        else:
-            rel_prom = 1.0
-        recent_peaks.append(max_amplitude)
         # Slope from point 0 to the max amplitude point
         loc = np.argmax(envelope)
         max_onset_slope = (envelope[loc] - envelope[0]) / (loc + 1) if loc > 0 else 0
@@ -145,6 +141,13 @@ for file_path in file_list:
         peaks2 = find_peaks(envelope2, prominence=np.max(envelope2)*0.3)
         burst_count2 = len(peaks2[0])
 
+        # Relative Prominence
+        if len(recent_peaks) > 0:
+            rel_prom = max_amplitude/np.mean(recent_peaks)
+        else:
+            rel_prom = 1.0
+        recent_peaks.append(max_amplitude)
+
         # Peak falloff
         window_max = np.argmax(envelope)
         global_loc = i+ window_max
@@ -153,6 +156,12 @@ for file_path in file_list:
             peak_falloff = 0
         else:
             peak_falloff = (envelope[window_max] - np.abs(sEMG[end_loc])) / (end_loc - global_loc)
+
+        # Spike helper
+        if len(recent_peaks) >=2:
+            prev_peak_ratio = max_amplitude / recent_peaks[-2]
+        else:
+            prev_peak_ratio = 1.0
 
         all_features.append({
             'id': patient_id,
@@ -171,6 +180,7 @@ for file_path in file_list:
             'AutocorrPeak': ac_peak,
             'BurstCountLong': burst_count2,
             'PeakFalloff': peak_falloff,
+            'SpikeHelper': prev_peak_ratio,
             'label': label
         })
 

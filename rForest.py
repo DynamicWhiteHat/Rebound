@@ -61,7 +61,9 @@ for fold, (train_idx, test_idx) in enumerate(gkf.split(x, y, groups=groups)):
 mean_accuracy = np.mean(fold_accuracies)
 print(f"\nFinal Overall Generalized Accuracy: {mean_accuracy:.4f}")
 print(classification_report(true_labels, predicted_labels, target_names=['Null/Cough/Speech', 'Chewing', 'Swallowing']))
-
+print(f"Feature Importances:")
+for i, importance in enumerate(rf.feature_importances_):
+    print(f"  {x.columns[i]}: {importance:.4f}")
 
 today_str = datetime.now().strftime("%Y-%m-%d")
 output_dir = os.path.join("Results", today_str)
