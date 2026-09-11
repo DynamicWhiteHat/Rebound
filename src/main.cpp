@@ -75,9 +75,12 @@ void setup()
     Serial.println("Warning: Chip ID does not match the ADS1292 family signature.");
   }
 
-  sEMG.writeReg(ADS_REG_CONFIG1, 0x02);
+  sEMG.writeReg(ADS_REG_CONFIG1, 0x00);
   sEMG.writeReg(ADS_REG_CONFIG2, 0xA0);
   sEMG.beginChannel2();
+  sEMG.start();
+  delay(1);
+  sEMG.rdatac();
   pinMode(ADS1292_DRDY_PIN, INPUT);
   attachInterrupt(digitalPinToInterrupt(ADS1292_DRDY_PIN), sEMGDataReadyISR, FALLING);
 }
